@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>📄 AI Resume Analyzer</h1>
+        <p>Upload your resume and get an AI-powered analysis.</p>
+
+        <input type="file" id="resumeFile" accept=".pdf">
+
+        <button id="analyzeBtn">
+            Analyze Resume
+        </button>
+
+        <div id="loading" class="hidden">
+            Analyzing Resume...
+        </div>
+
+        <div id="result" class="hidden">
+
+            <div class="card">
+                <h2>Summary</h2>
+                <p id="summary"></p>
+            </div>
+
+            <div class="card">
+                <h2>Skills</h2>
+                <ul id="skills"></ul>
+            </div>
+
+            <div class="card">
+                <h2>Strengths</h2>
+                <ul id="strengths"></ul>
+            </div>
+
+            <div class="card">
+                <h2>Weaknesses</h2>
+                <ul id="weaknesses"></ul>
+            </div>
+
+            <div class="card">
+                <h2>Suggestions</h2>
+                <ul id="suggestions"></ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
